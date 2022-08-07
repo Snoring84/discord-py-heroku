@@ -8,6 +8,10 @@ import requests
 import os
 from discord.ext import commands 
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 cg = CoinGeckoAPI()
 client = discord.Client()
 bot = commands.Bot(command_prefix="$")
