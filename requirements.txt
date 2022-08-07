@@ -3,3 +3,4 @@ pycoingecko
 pandas
 datetime
 requests
+dotenv
