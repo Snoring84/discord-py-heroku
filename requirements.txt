@@ -1,2 +1,2 @@
 discord.py
-pycoingecko.py
+pycoingecko
