@@ -6,13 +6,12 @@ import pandas as pd
 from datetime import datetime
 import requests
 import os
-from discord.ext import commands
-
-bot = commands.Bot(command_prefix="!")
-TOKEN = os.getenv("DISCORD_TOKEN")
+from discord.ext import commands 
 
 cg = CoinGeckoAPI()
 client = discord.Client()
+bot = commands.Bot(command_prefix="$")
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 response = requests.get("https://newsapi.org/v2/everything?q=crypto&apiKey=366e5f915fa34fffa3b0eece6fb4db3d")
 data = json.loads(response.text)
@@ -393,6 +392,5 @@ async def on_message(message):
         embed.set_footer(text="Thank you for using Crypto Bot Price Checker 🙏")
 
         await message.channel.send(embed=embed)
-                
-if __name__ == "__main__":
-    bot.run(TOKEN)
+
+client.run(TOKEN)
