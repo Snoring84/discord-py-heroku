@@ -40,10 +40,6 @@ def get_crypto_chart(token):
         plt.axis('off')
         plt.title(f'7-day historical market price of {token}', fontsize=15, color= 'white', fontweight='bold');
 
-
-        filename =  r"C:\Users\logan\Coding\JoshBot\test.png"
-        plt.savefig(filename, transparent=True)
-
         plt.close()
 
 
@@ -180,13 +176,12 @@ async def on_message(message):
         embed.add_field(name="All Time High 👑", value= btc.coin_ath_price, inline=True)
         embed.add_field(name="ATH Percent Change 📊", value= btc.coin_ath_change_percent, inline=True)
         embed.add_field(name="ATL 😢", value = btc.coin_atl, inline=True)
-        file = discord.File(r"C:\Users\logan\Coding\JoshBot\test.png", filename="image.png")
+    
 
         embed.set_image(url="attachment://image.png")
 
         embed.set_footer(text="Thank you for using Crypto Bot Price Checker 🙏")
 
-        await message.channel.send(file=file, embed=embed)
 
     if message.content.startswith('$xrp'):
         get_crypto_chart('ripple')
@@ -211,14 +206,12 @@ async def on_message(message):
         embed.add_field(name="All Time High 👑", value= xrp.coin_ath_price, inline=True)
         embed.add_field(name="ATH Percent Change 📊", value= xrp.coin_ath_change_percent , inline=True)
         embed.add_field(name="ATL 😢", value = xrp.coin_atl, inline=True)
-        file = discord.File(r"C:\Users\logan\Coding\JoshBot\test.png", filename="image.png")
+
 
         embed.set_image(url="attachment://image.png")
 
         embed.set_footer(text="Thank you for using Crypto Bot Price Checker 🙏")
 
-
-        await message.channel.send(file=file, embed=embed)
 
     if message.content.startswith('$eth'):
         get_crypto_chart('ethereum')
@@ -242,13 +235,13 @@ async def on_message(message):
         embed.add_field(name="All Time High 👑", value= eth.coin_ath_price, inline=True)
         embed.add_field(name="ATH Percent Change 📊", value= eth.coin_ath_change_percent, inline=True)
         embed.add_field(name="ATL 😢", value = eth.coin_atl, inline=True)
-        file = discord.File(r"C:\Users\logan\Coding\JoshBot\test.png", filename="image.png")
+     
 
         embed.set_image(url="attachment://image.png")
 
         embed.set_footer(text="Thank you for using Crypto Bot Price Checker 🙏")
 
-        await message.channel.send(file=file, embed=embed)
+
 
     
     if message.content.startswith('$link'):
@@ -273,13 +266,13 @@ async def on_message(message):
         embed.add_field(name="ATH Percent Change 📊", value=link.coin_ath_change_percent, inline=True)
         embed.add_field(name="ATL 😢", value = link.coin_atl, inline=True)
 
-        file = discord.File(r"C:\Users\logan\Coding\JoshBot\test.png", filename="image.png")
+       
 
         embed.set_image(url="attachment://image.png")
 
         embed.set_footer(text="Thank you for using Crypto Bot Price Checker 🙏")
 
-        await message.channel.send(file=file, embed=embed)
+      
     
     if message.content.startswith('$ada'):
         get_crypto_chart('cardano')
@@ -303,13 +296,13 @@ async def on_message(message):
         embed.add_field(name="All Time High 👑", value= ada.coin_ath_price, inline=True)
         embed.add_field(name="ATH Percent Change 📊", value= ada.coin_ath_change_percent, inline=True)
         embed.add_field(name="ATL 😢", value = ada.coin_atl, inline=True)
-        file = discord.File(r"C:\Users\logan\Coding\JoshBot\test.png", filename="image.png")
+  
 
         embed.set_image(url="attachment://image.png")
 
         embed.set_footer(text="Thank you for using Crypto Bot Price Checker 🙏")
 
-        await message.channel.send(file=file, embed=embed)
+     
 
     if message.content.startswith('$avax'):
         get_crypto_chart('avalanche-2')
@@ -333,14 +326,13 @@ async def on_message(message):
         embed.add_field(name="All Time High 👑", value= avax.coin_ath_price, inline=True)
         embed.add_field(name="ATH Percent Change 📊", value= avax.coin_ath_change_percent, inline=True)
         embed.add_field(name="ATL 😢", value = avax.coin_atl, inline=True)
-        file = discord.File(r"C:\Users\logan\Coding\JoshBot\test.png", filename="image.png")
+       
 
         embed.set_image(url="attachment://image.png")
 
         embed.set_footer(text="Thank you for using Crypto Bot Price Checker 🙏")
 
-        await message.channel.send(file=file, embed=embed)
-
+        
     if message.content.startswith('$doge'):
         get_crypto_chart('dogecoin')
         
@@ -364,13 +356,13 @@ async def on_message(message):
         embed.add_field(name="ATH Percent Change 📊", value= doge.coin_ath_change_percent, inline=True)
         embed.add_field(name="ATL 😢", value = doge.coin_atl, inline=True)
         
-        file = discord.File(r"C:\Users\logan\Coding\JoshBot\test.png", filename="image.png")
+       
 
         embed.set_image(url="attachment://image.png")
 
         embed.set_footer(text="Thank you for using Crypto Bot Price Checker 🙏")
 
-        await message.channel.send(file=file, embed=embed)
+     
     
     if message.content.startswith('$vet'):
         get_crypto_chart('vechain')
@@ -395,13 +387,13 @@ async def on_message(message):
         embed.add_field(name="ATH Percent Change 📊", value= vet.coin_ath_change_percent, inline=True)
         embed.add_field(name="ATL 😢", value = vet.coin_atl, inline=True)
 
-        file = discord.File(r"C:\Users\logan\Coding\JoshBot\test.png", filename="image.png")
+      
 
         embed.set_image(url="attachment://image.png")
 
         embed.set_footer(text="Thank you for using Crypto Bot Price Checker 🙏")
 
-        await message.channel.send(file=file, embed=embed)
+    
 
     
     if message.content.startswith('$filecoin'):
@@ -426,13 +418,11 @@ async def on_message(message):
         embed.add_field(name="ATH Percent Change 📊", value= filecoin.coin_ath_change_percent, inline=True)
         embed.add_field(name="ATL 😢", value = filecoin.coin_atl, inline=True)
 
-        file = discord.File(r"C:\Users\logan\Coding\JoshBot\test.png", filename="image.png")
 
         embed.set_image(url="attachment://image.png")
 
         embed.set_footer(text="Thank you for using Crypto Bot Price Checker 🙏")
 
-        await message.channel.send(file=file, embed=embed)
 
 
     
@@ -459,13 +449,13 @@ async def on_message(message):
         embed.add_field(name="ATH Percent Change 📊", value= qnt.coin_ath_change_percent, inline=True)
         embed.add_field(name="ATL 😢", value = qnt.coin_atl, inline=True)
 
-        file = discord.File(r"C:\Users\logan\Coding\JoshBot\test.png", filename="image.png")
+
 
         embed.set_image(url="attachment://image.png")
 
         embed.set_footer(text="Thank you for using Crypto Bot Price Checker 🙏")
 
-        await message.channel.send(file=file, embed=embed)
+ 
 
         
 if __name__ == "__main__":
