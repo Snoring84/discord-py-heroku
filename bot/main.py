@@ -1,5 +1,4 @@
 import discord
-import matplotlib.pyplot as plt
 from pycoingecko import CoinGeckoAPI
 import json
 import pandas as pd
