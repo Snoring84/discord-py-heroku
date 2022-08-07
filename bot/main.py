@@ -13,7 +13,6 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 
 cg = CoinGeckoAPI()
 client = discord.Client()
-bot = commands.Bot(command_prefix="$")
 
 response = requests.get("https://newsapi.org/v2/everything?q=crypto&apiKey=366e5f915fa34fffa3b0eece6fb4db3d")
 data = json.loads(response.text)
